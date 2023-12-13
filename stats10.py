@@ -15,8 +15,8 @@
 import statistics as st
 import matplotlib.pyplot as plt
 
-x = "14 23 10 21 7 80 32 30 92 14 26 21 38 20 35 21".split()
-x = [int(i) for i in x]
+s = "14 23 10 21 7 80 32 30 92 14 26 21 38 20 35 21"
+x = [int(i) for i in s.split()]
 print(x)
 x = sorted(x)
 print(x)

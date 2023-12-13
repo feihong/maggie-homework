@@ -1,4 +1,11 @@
+# notebooks
 jupyterlab
 jupytext
 matplotlib
 sympy
+
+# flashcard page
+ghp-import
+markdown
+py-asciimath
+pymdown-extensions

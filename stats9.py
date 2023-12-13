@@ -15,13 +15,13 @@
 import statistics as st
 import matplotlib.pyplot as plt
 
-x = """
+s = """
 40 60 73 77 51 68
 68 35 68 53 64 75
 76 69 59 55 38 57
 68 84 75 62 73 75
 85 77"""
-x = [int(i) for i in x.split()]
+x = [int(i) for i in s.split()]
 print(x)
 x = sorted(x)
 print(x)
@@ -41,13 +41,13 @@ print('Outliers:', outliers)
 plt.boxplot(x, vert=False)
 plt.show()
 
-y = """
+s = """
 19 18 20 29 39 43
 71 56 44 44 18 19
 19 18 18 20 25 29
 25 22 31 24 24 23
 19 19 18 28 20 31"""
-y = [int(i) for i in y.split()]
+y = [int(i) for i in s.split()]
 print(y)
 y = sorted(y)
 print(y)
