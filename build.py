@@ -6,7 +6,7 @@ from py_asciimath.translator.translator import ASCIIMath2Tex
 from pymdownx.arithmatex import ArithmatexExtension
 
 flashcards_file = Path('flashcards.md')
-output_file = Path('_build/index.html')
+output_file = Path('content/flashcards-todo.html')
 
 template = string.Template("""\
 <!doctype html>
@@ -14,7 +14,7 @@ template = string.Template("""\
 <head>
 <meta charset="utf-8" >
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Flashcards to add</title>
+<title>Flashcards to Add</title>
 
 <style>
 body {
@@ -46,7 +46,7 @@ window.MathJax = {
 
 </head>
 <body>
-<h1>Flashcards to add</h1>
+<h1>Flashcards to Add</h1>
 <p style="color: gray; font-size: 0.8em;">Remember to add clozes in the appropriate places.</p>
 <hr>
 

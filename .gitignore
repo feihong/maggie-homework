@@ -1,4 +1,5 @@
 .ipynb_checkpoints
 *.ipynb
 
-_build/
+# generated file
+content/flashcards-todo.html
