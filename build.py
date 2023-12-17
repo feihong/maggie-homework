@@ -20,6 +20,9 @@ template = string.Template("""\
 body {
   font-size: 1.3em;
 }
+code {
+  background-color: #eee;
+}
 </style>
 
 <script>
@@ -69,8 +72,8 @@ def convert(s):
   )[1:-1]
 
 input_text = flashcards_file.read_text()
-input_text = re.sub(r'```([^`]+)```', lambda m: '$$'+convert(m.group(1))+'$$', input_text)
-input_text = re.sub(r'`([^`]+)`', lambda m: '$'+convert(m.group(1))+'$', input_text)
+input_text = re.sub(r'\$\$([^$]+)\$\$', lambda m: r'\['+convert(m.group(1))+r'\]', input_text)
+input_text = re.sub(r'\$([^$]+)\$', lambda m: r'\('+convert(m.group(1))+r'\)', input_text)
 
 content = md.convert(input_text)
 
