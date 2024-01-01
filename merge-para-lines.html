@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merge Paragraph Lines</title>
+<style>
+textarea {
+  width: 40em;
+  height: 15em;
+  margin-bottom: 1em;
+}
+
+#instructions {
+  font-size: 0.8em;
+  color: gray;
+  margin-bottom: 0;
+}
+
+#results {
+  white-space: pre-line;
+  width: 40em;
+  cursor: pointer;
+  padding: 0.5em;
+  border: 1px dashed gray;
+}
+</style>
+
+</head>
+<body>
+<h1>Merge Paragraph Lines</h1>
+
+<textarea id="input" oninput="handleInput()"></textarea>
+
+<div id="instructions">Click below to copy to clipboard</div>
+<div id="results" onclick="copyToClipboard()"></div>
+
+<script>
+
+handleInput()
+
+function handleInput() {
+  const value = document.getElementById('input').value
+
+  const resultsEl = document.getElementById('results')
+
+  resultsEl.textContent = value.replace(/-\s/g, '').replace(/\n/g, " ")
+}
+
+function copyToClipboard() {
+  const results = document.getElementById('results').textContent
+
+  navigator.clipboard.writeText(results)
+  console.log('Copied to clipboard:', results)
+}
+</script>
+
+</body>
+</html>
